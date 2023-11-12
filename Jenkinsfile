@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Checkout') {
             steps {
-                git branch:'master', url: 'https://github.com/waltertan98/Vulnerable-Web-Application'
+                git branch:'master', url: 'https://github.com/waltertan98/Vulnerable-Web-Application.git'
             }
         }
         stage('Code Quality Check via SonarQube') {
