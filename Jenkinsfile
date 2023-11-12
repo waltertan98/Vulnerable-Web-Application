@@ -11,7 +11,7 @@ pipeline {
                 script {
                     def scannerHome = tool 'SonarQube';
                     withSonarQubeEnv('SonarQube') {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=."
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_acc65403157667f7ed5f7309ad4110eee9f8471000 "
                     }
                 }
             }
